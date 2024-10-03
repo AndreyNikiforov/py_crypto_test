@@ -7,7 +7,7 @@ FROM python:3.12-alpine3.19 AS base
 WORKDIR /app
 RUN \
   apk update && \
-  apk add git curl binutils gcc libc-dev libffi-dev zlib-dev openssl-dev tzdata bash python3-dev musl-dev pkgconfig cargo
+  apk add git curl binutils gcc libc-dev libffi-dev zlib-dev openssl-dev tzdata bash patchelf python3-dev musl-dev pkgconfig cargo
 # from https://cryptography.io/en/latest/installation/#building-cryptography-on-linux
 # If you get an error with openssl-dev you may have to use libressl-dev.
 # cargo 
