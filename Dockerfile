@@ -3,7 +3,8 @@
 #     docker buildx build . --platform=linux/arm/v7 --builder=container --progress plain -o dist -f Dockerfile
 
 # map source image to base
-FROM python:3.12-alpine3.19 AS base
+# sha256:708747cd8faaa772fcbd8f9950c83cdd220d9ff9f178cfd7dcddf1597958b246
+FROM python:3.12.7-alpine3.19 AS base
 WORKDIR /app
 RUN \
   apk update && \
