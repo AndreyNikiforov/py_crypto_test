@@ -13,6 +13,7 @@ RUN \
 # cargo 
 
 FROM base AS builder
+ARG CARGO_NET_GIT_FETCH_WITH_CLI=true
 WORKDIR /app
 RUN \
     python3 -m venv .venv && \
