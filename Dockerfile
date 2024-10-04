@@ -20,7 +20,7 @@ WORKDIR /app
 RUN \
     python3 -m venv .venv && \
     . .venv/bin/activate && \
-    pip3 install --disable-pip-version-check cryptography
+    CARGO_LOG=trace CARGO_TERM_VERBOSE=true pip3 install --disable-pip-version-check cryptography
 
 FROM scratch
 WORKDIR /
