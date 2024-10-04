@@ -14,6 +14,8 @@ RUN \
 # cargo 
 
 FROM base AS builder
+# https://github.com/certbot/certbot/issues/10020
+ARG CARGO_NET_GIT_FETCH_WITH_CLI=true
 WORKDIR /app
 RUN \
     python3 -m venv .venv && \
